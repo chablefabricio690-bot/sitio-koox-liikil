@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KO'OX LÍIK'IL - Impulsando Proyectos Juveniles en Yucatán</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-azul-oscuro: #003366; --color-verde-logo: #006666; --color-amarillo-acento: #FFC300; --color-fondo-crema: #F5F0E4; --color-texto-oscuro: #1A1A1A; --color-texto-claro: #FFFFFF; --color-fondo-seccion: #FFFFFF; --color-verde-hero: #013220; 
+        }
+        body {font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--color-fondo-crema); color: var(--color-texto-oscuro); box-sizing: border-box;}
+        h1, h2, h3 {font-weight: 700;}
+        .container {max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+        .main-header {background-color: var(--color-texto-claro); padding: 15px 0; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+        .header-content {display: flex; justify-content: space-between; align-items: center;}
+        .logo {width: 150px; height: auto;}
+        .main-nav a {color: var(--color-azul-oscuro); text-decoration: none; margin-left: 25px; font-weight: 600; transition: color 0.3s ease;}
+        .main-nav a:hover, .main-nav a.active {color: var(--color-amarillo-acento);}
+        .hero-section {background-color: var(--color-verde-hero); color: var(--color-texto-claro); text-align: center; padding: 120px 20px;}
+        .hero-section h1 {font-size: 3.5em; margin-bottom: 20px; line-height: 1.2;}
+        .hero-section h1 span {color: var(--color-amarillo-acento);}
+        .hero-section p {font-size: 1.2em; max-width: 700px; margin: 0 auto 40px auto;}
+        .btn {background-color: var(--color-amarillo-acento); color: var(--color-texto-oscuro); padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1em; transition: all 0.3s ease; display: inline-block; border: 2px solid var(--color-amarillo-acento);}
+        .btn:hover {background-color: transparent; color: var(--color-amarillo-acento);}
+        .section {padding: 80px 0;}
+        .section-title {text-align: center; font-size: 2.8em; margin-bottom: 15px;}
+        .section-title::after {content: ''; display: block; width: 80px; height: 4px; background-color: var(--color-amarillo-acento); margin: 15px auto 50px auto; border-radius: 2px;}
+        #about {background-color: var(--color-fondo-seccion);}
+        #about .about-content {display: flex; align-items: center; gap: 50px;}
+        #about .about-text {flex: 1; font-size: 1.1em; line-height: 1.8;}
+        #about .about-image {flex: 1; text-align: center;}
+        #about .about-image img {max-width: 100%; border-radius: 12px;}
+        #process {background-color: var(--color-fondo-crema);}
+        #process .process-image {max-width: 900px; width: 100%; margin: 0 auto; display: block; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-radius: 12px;}
+        .cta-section {background-color: var(--color-azul-oscuro); color: var(--color-texto-claro); text-align: center; padding: 80px 20px;}
+        .cta-section h2 {font-size: 2.5em; margin-bottom: 20px;}
+        .cta-section p {font-size: 1.1em; margin-bottom: 30px;}
+        .main-footer {background-color: #111; color: #aaa; padding: 40px 0; text-align: center; margin-top: auto;}
+        .social-links a {color: #aaa; margin: 0 15px; font-size: 24px; transition: color 0.3s ease;}
+        .social-links a:hover {color: var(--color-amarillo-acento);}
+        .footer-text {margin-top: 20px; font-size: 0.9em;}
+        @media (max-width: 768px) {.main-nav { display: none; } .hero-section h1 { font-size: 2.5em; } .section-title { font-size: 2.2em; } #about .about-content { flex-direction: column; }}
+    </style>
+</head>
+<body style="display:flex; flex-direction:column; min-height:100vh;">
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html">
+                <img src="imagenes/Logo.png" alt="Logo de KO'OX LÍIK'IL" class="logo">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="flex-grow:1;">
+        <section class="hero-section">
+            <div class="container">
+                <h1>Transforma tu idea en un <span>proyecto para tu comunidad</span></h1>
+                <p>En KO'OX LÍIK'IL te damos el acompañamiento que necesitas para desarrollar tus habilidades y emprender el vuelo.</p>
+                <a href="recursos.html" class="btn">¡Inicia tu Proyecto!</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">¿Qué es KO'OX LÍIK'IL?</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Somos un programa de apoyo para jóvenes en comunidades de Yucatán para grandes ideas. Sabemos que a veces falta conocimiento, recursos o una guía para empezar. Nuestro propósito es ser ese acompañante en tu viaje.</p>
+                        <p>Te ayudamos a diagnosticar problemas, a validar tu idea, a buscar aliados clave en tu comunidad y a encontrar los recursos para hacer realidad tu proyecto. ¡Estamos aquí para impulsar tu talento!</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Jóvenes trabajando en equipo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <div class="container">
+                <h2 class="section-title">Nuestro Proceso de Acompañamiento</h2>
+                <img src="imagenes/Programa.png" alt="Infografía con los 5 pasos para postularse al programa" class="process-image">
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2>¿Tienes una idea? ¡Es tu momento!</h2>
+                <p>Visita nuestra sección de recursos para encontrar el formulario de postulación y las guías que te ayudarán a empezar.</p>
+                <a href="recursos.html" class="btn">Ver Recursos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+ 
+            <p class="footer-text">© 2025 KO'OX LÍIK'IL. Todos los derechos reservados. Un proyecto para la juventud de Yucatán.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

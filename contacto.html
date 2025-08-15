@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - KO'OX LÍIK'IL</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-azul-oscuro: #003366; --color-verde-logo: #006666; --color-amarillo-acento: #FFC300; --color-fondo-crema: #F5F0E4; --color-texto-oscuro: #1A1A1A; --color-texto-claro: #FFFFFF; --color-fondo-seccion: #FFFFFF; --color-verde-hero: #013220;
+        }
+        body {font-family: 'Poppins', sans-serif; margin: 0; background-color: #f9f9f9; color: var(--color-texto-oscuro); box-sizing: border-box; display: flex; flex-direction: column; min-height: 100vh;}
+        main {flex-grow: 1;}
+        .container {max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+        .main-header {background-color: var(--color-texto-claro); padding: 15px 0; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+        .header-content {display: flex; justify-content: space-between; align-items: center;}
+        .logo {width: 150px; height: auto;}
+        .main-nav a {color: var(--color-azul-oscuro); text-decoration: none; margin-left: 25px; font-weight: 600; transition: color 0.3s ease;}
+        .main-nav a:hover, .main-nav a.active {color: var(--color-amarillo-acento);}
+        .contact-section {padding: 80px 0;}
+        .section-header {text-align: center; margin-bottom: 60px;}
+        .section-header h1 {font-size: 3em; margin-bottom: 10px; color: var(--color-texto-oscuro);}
+        .section-header p {font-size: 1.1em; color: #666; max-width: 600px; margin: 0 auto;}
+        .contact-grid {display: grid; grid-template-columns: 2fr 1fr; gap: 50px; background-color: var(--color-fondo-seccion); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
+        .contact-form-container h2 {font-size: 2em; margin-top: 0; margin-bottom: 30px; color: var(--color-azul-oscuro);}
+        .form-group {margin-bottom: 20px;}
+        .form-group label {display: block; margin-bottom: 8px; font-weight: 600; color: #555;}
+        .form-control {width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 1em; box-sizing: border-box;}
+        textarea.form-control {resize: vertical; min-height: 150px;}
+        .btn {background-color: var(--color-amarillo-acento); color: var(--color-texto-oscuro); padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1em; transition: all 0.3s ease; display: inline-block; border: 2px solid var(--color-amarillo-acento); cursor: pointer;}
+        .btn:hover {background-color: #e6a700; border-color: #e6a700;}
+        .contact-info-container {background-color: var(--color-verde-hero); color: var(--color-texto-claro); padding: 30px; border-radius: 8px;}
+        .contact-info-container h3 {font-size: 1.6em; margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid var(--color-amarillo-acento); padding-bottom: 10px;}
+        .info-item {display: flex; align-items: center; gap: 15px; margin-bottom: 20px;}
+        .info-item .icon {font-size: 1.5em; color: var(--color-amarillo-acento);}
+        .info-item a {color: var(--color-texto-claro); text-decoration: none;}
+        .main-footer {background-color: #111; color: #aaa; padding: 40px 0; text-align: center;}
+        .social-links a {color: #aaa; margin: 0 15px; font-size: 24px; transition: color 0.3s ease;}
+        .social-links a:hover {color: var(--color-amarillo-acento);}
+        .footer-text {margin-top: 20px; font-size: 0.9em;}
+        @media (max-width: 900px) {.contact-grid {grid-template-columns: 1fr;}}
+        @media (max-width: 768px) {.main-nav { display: none; } .section-header h1 { font-size: 2.2em; }}
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html">
+                <img src="imagenes/Logo.png" alt="Logo de KO'OX LÍIK'IL" class="logo">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html" class="active">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Hablemos de tu Proyecto</h1>
+                    <p>Si tienes una duda, una propuesta o simplemente quieres saber más de nosotros, no dudes en escribirnos. Estamos aquí para escucharte.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2>Envíanos un Mensaje</h2>
+                        <form id="contactForm">
+                            <div class="form-group"><label for="name">Tu Nombre</label><input type="text" id="name" name="name" class="form-control" required></div>
+                            <div class="form-group"><label for="email">Correo Electrónico</label><input type="email" id="email" name="email" class="form-control" required></div>
+                            <div class="form-group"><label for="subject">Asunto</label><input type="text" id="subject" name="subject" class="form-control" required></div>
+                            <div class="form-group"><label for="message">Mensaje</label><textarea id="message" name="message" class="form-control" required></textarea></div>
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <h3>Información</h3>
+                        <div class="info-item"><i class="fas fa-envelope icon"></i><a href="mailto:contacto@kooxliikil.com">contacto@kooxliikil.com</a></div>
+                        <div class="info-item"><i class="fas fa-phone-alt icon"></i><a href="tel:+529991234567">+52 (999) 123 4567</a></div>
+                        <div class="info-item"><i class="fas fa-map-marker-alt icon"></i><span>Mérida, Yucatán, México</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+
+            <p class="footer-text">© 2025 KO'OX LÍIK'IL. Todos los derechos reservados. Un proyecto para la juventud de Yucatán.</p>
+        </div>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

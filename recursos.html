@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - KO'OX LÍIK'IL</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===== ESTILOS CSS DENTRO DEL MISMO ARCHIVO ===== -->
+    <style>
+        :root {
+            --color-azul-oscuro: #003366; --color-verde-logo: #006666; --color-amarillo-acento: #FFC300; --color-fondo-crema: #F5F0E4; --color-texto-oscuro: #1A1A1A; --color-texto-claro: #FFFFFF; --color-fondo-seccion: #FFFFFF; --color-verde-hero: #013220;
+        }
+        body {font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--color-fondo-crema); color: var(--color-texto-oscuro); box-sizing: border-box; display: flex; flex-direction: column; min-height: 100vh;}
+        main {flex-grow: 1;}
+        .container {max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+        .main-header {background-color: var(--color-texto-claro); padding: 15px 0; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+        .header-content {display: flex; justify-content: space-between; align-items: center;}
+        .logo {width: 150px; height: auto;}
+        .main-nav a {color: var(--color-azul-oscuro); text-decoration: none; margin-left: 25px; font-weight: 600; transition: color 0.3s ease;}
+        .main-nav a:hover, .main-nav a.active {color: var(--color-amarillo-acento);}
+        .page-title-section {background-color: var(--color-verde-hero); color: var(--color-texto-claro); padding: 60px 20px; text-align: center;}
+        .page-title-section h1 {font-size: 3em; margin: 0;}
+        .resources-section {padding: 80px 0;}
+        .resources-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; justify-content: center;}
+        .resource-card {background-color: var(--color-fondo-seccion); border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); padding: 30px; text-align: center; display: flex; flex-direction: column; align-items: center; border-top: 5px solid var(--color-amarillo-acento);}
+        .resource-card .icon {font-size: 3.5em; color: var(--color-verde-logo); margin-bottom: 20px;}
+        .resource-card h3 {font-size: 1.8em; margin-bottom: 15px; color: var(--color-azul-oscuro);}
+        .resource-card p {font-size: 1em; line-height: 1.7; flex-grow: 1; margin-bottom: 30px;}
+        .resource-actions {display: flex; gap: 15px;}
+        .btn {background-color: var(--color-amarillo-acento); color: var(--color-texto-oscuro); padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1em; transition: all 0.3s ease; display: inline-block; border: 2px solid var(--color-amarillo-acento);}
+        .btn.btn-secondary {background-color: transparent; color: var(--color-verde-logo); border-color: var(--color-verde-logo);}
+        .btn:hover {transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+        .btn.btn-secondary:hover {background-color: var(--color-verde-logo); color: var(--color-texto-claro);}
+        .main-footer {background-color: #111; color: #aaa; padding: 40px 0; text-align: center;}
+        .social-links a {color: #aaa; margin: 0 15px; font-size: 24px; transition: color 0.3s ease;}
+        .social-links a:hover {color: var(--color-amarillo-acento);}
+        .footer-text {margin-top: 20px; font-size: 0.9em;}
+        @media (max-width: 768px) {.main-nav { display: none; } .page-title-section h1 { font-size: 2.2em; } .resources-grid { grid-template-columns: 1fr; }}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html">
+                <img src="imagenes/Logo.png" alt="Logo de KO'OX LÍIK'IL" class="logo">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="recursos.html" class="active">Recursos</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-title-section">
+            <div class="container">
+                <h1>Recursos y Herramientas</h1>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="container">
+                <div class="resources-grid">
+                    
+                    <!-- Tarjeta para el Taller -->
+                    <div class="resource-card">
+                        <i class="fas fa-chalkboard-teacher icon"></i>
+                        <h3>Taller de Proyectos</h3>
+                        <p>Una guía completa con 6 sesiones diseñadas para llevar tu idea desde cero hasta un proyecto listo para presentarse. Aprende sobre emprendimiento, detección de problemas, Design Thinking y más.</p>
+                        <div class="resource-actions">
+                            <a href="documentos/taller_proyectos.pdf" target="_blank" class="btn">Ver en Línea</a>
+                            <a href="documentos/taller_proyectos.pdf" download class="btn btn-secondary">Descargar</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta para el Formulario de Aliados (PDF) -->
+                    <div class="resource-card">
+                        <i class="fas fa-users icon"></i>
+                        <h3>Formulario de Aliados</h3>
+                        <p>Esta herramienta te ayudará a identificar a las personas y los recursos clave en tu comunidad que pueden apoyar tu proyecto. ¡Un paso fundamental para construir una red de apoyo sólida!</p>
+                        <div class="resource-actions">
+                            <a href="documentos/formulario_aliados.pdf" target="_blank" class="btn">Ver en Línea</a>
+                            <a href="documentos/formulario_aliados.pdf" download class="btn btn-secondary">Descargar</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta para el Formulario de Agentes Clave (Enlace Externo) -->
+                    <div class="resource-card">
+                        <i class="fas fa-network-wired icon"></i>
+                        <h3>Identificador de Agentes Clave</h3>
+                        <p>Utiliza este formulario en línea para mapear a las personas y recursos en tu comunidad que pueden ser cruciales para el éxito de tu proyecto. ¡Una herramienta digital para tu investigación!</p>
+                        <div class="resource-actions">
+                            <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=GT3vN1EWUkS3YdwkFL8EFh8B9rnSIRxPiKJmzebMEDlURFpINFZJWlFZOTVSRVFWVkVBUzJQS01JQi4u&origin=lprLink&route=shorturl" target="_blank" class="btn">Abrir Herramienta</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+
+            <p class="footer-text">© 2025 KO'OX LÍIK'IL. Todos los derechos reservados. Un proyecto para la juventud de Yucatán.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

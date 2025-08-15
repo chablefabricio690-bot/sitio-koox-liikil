@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Proyecto - KO'OX LÍIK'IL</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===== ESTILOS CSS DENTRO DEL MISMO ARCHIVO ===== -->
+    <style>
+        :root {
+            --color-azul-oscuro: #003366; --color-verde-logo: #006666; --color-amarillo-acento: #FFC300; --color-fondo-crema: #F5F0E4; --color-texto-oscuro: #1A1A1A; --color-texto-claro: #FFFFFF; --color-fondo-seccion: #FFFFFF;
+        }
+        body {font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--color-fondo-seccion); color: var(--color-texto-oscuro); box-sizing: border-box; display: flex; flex-direction: column; min-height: 100vh;}
+        main {flex-grow: 1;}
+        .container {max-width: 900px; margin: 0 auto; padding: 0 20px;}
+        
+        /* --- ENCABEZADO CONSISTENTE --- */
+        .main-header {background-color: var(--color-texto-claro); padding: 15px 0; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+        .header-content {display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+        .logo {width: 150px; height: auto;}
+        .main-nav a {color: var(--color-azul-oscuro); text-decoration: none; margin-left: 25px; font-weight: 600; transition: color 0.3s ease;}
+        .main-nav a:hover, .main-nav a.active {color: var(--color-amarillo-acento);}
+
+        /* --- ESTILOS DE LA PÁGINA DE DETALLE --- */
+        .project-banner {width: 100%; height: 40vh; object-fit: cover;}
+        
+        .project-header {text-align: center; padding: 40px 0;}
+        .project-header .tag {background-color: var(--color-amarillo-acento); color: var(--color-texto-oscuro); padding: 5px 15px; border-radius: 50px; font-size: 0.9em; font-weight: 700; display: inline-block; margin-bottom: 20px;}
+        .project-header h1 {font-size: 3em; margin: 0;}
+        
+        .project-summary {display: flex; justify-content: space-around; text-align: center; background-color: var(--color-fondo-crema); padding: 30px 20px; border-radius: 12px; margin-bottom: 40px;}
+        .summary-item strong {display: block; font-size: 1.5em; color: var(--color-verde-logo);}
+        .summary-item span {color: #555; font-weight: 600;}
+        
+        .project-content {padding-bottom: 80px;}
+        .project-content h2 {font-size: 1.8em; margin-top: 40px; margin-bottom: 20px; border-bottom: 3px solid var(--color-amarillo-acento); padding-bottom: 10px; display: inline-block;}
+        .project-content p {font-size: 1.1em; line-height: 1.8;}
+        
+        .project-gallery {margin-top: 50px;}
+        .gallery-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+        .gallery-grid img {width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease;}
+        .gallery-grid img:hover {transform: scale(1.05);}
+        
+        /* --- PIE DE PÁGINA CONSISTENTE --- */
+        .main-footer {background-color: #111; color: #aaa; padding: 40px 0; text-align: center;}
+        .social-links a {color: #aaa; margin: 0 15px; font-size: 24px; transition: color 0.3s ease;}
+        .social-links a:hover {color: var(--color-amarillo-acento);}
+        .footer-text {margin-top: 20px; font-size: 0.9em;}
+
+        @media (max-width: 768px) {
+            .main-nav { display: none; }
+            .project-header h1 { font-size: 2.2em; }
+            .project-summary { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html"><img src="imagenes/Logo.png" alt="Logo de KO'OX LÍIK'IL" class="logo"></a>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="recursos.html">Recursos</a>
+                <a href="galeria.html" class="active">Galería</a> <!-- Marcamos Galería como activa -->
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <img src="" alt="Imagen principal del proyecto" class="project-banner" id="bannerImg">
+        <div class="container">
+            <div class="project-header">
+                <span class="tag" id="proyectoTag"></span>
+                <h1 id="proyectoTitulo"></h1>
+            </div>
+
+            <div class="project-summary">
+                <div class="summary-item"><strong id="proyectoComunidad"></strong><span>Comunidad</span></div>
+                <div class="summary-item"><strong id="proyectoParticipantes"></strong><span>Participantes</span></div>
+                <div class="summary-item"><strong id="proyectoAnio"></strong><span>Año de Inicio</span></div>
+            </div>
+
+            <div class="project-content">
+                <h2>El Reto</h2>
+                <p id="proyectoReto"></p>
+                
+                <h2>La Solución</h2>
+                <p id="proyectoSolicitud"></p>
+
+                <h2>El Impacto</h2>
+                <p id="proyectoImpacto"></p>
+
+                <div class="project-gallery">
+                    <h2>Galería del Proyecto</h2>
+                    <div class="gallery-grid" id="proyectoGaleriaGrid">
+                        <!-- Las imágenes se cargarán aquí con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+
+            <p class="footer-text">© 2025 KO'OX LÍIK'IL. Todos los derechos reservados. Un proyecto para la juventud de Yucatán.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT PARA CARGAR EL CONTENIDO DINÁMICO ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Base de datos simulada con la información de los proyectos
+            const proyectos = {
+                '1': {
+                    tag: 'Medio Ambiente',
+                    titulo: 'Huerto Comunitario "Ixi\'im"',
+                    comunidad: 'Maní',
+                    participantes: '8 Jóvenes',
+                    anio: '2023',
+                    reto: 'En la comunidad de Maní, se identificó un terreno baldío que se había convertido en un foco de basura y desuso. Además, las familias expresaron la dificultad de acceder a hortalizas frescas y orgánicas a precios justos. El reto era doble: recuperar un espacio público y fomentar la soberanía alimentaria.',
+                    solicitud: 'Un grupo de 8 jóvenes, con el acompañamiento de KO\'OX LÍIK\'IL, diseñó el proyecto "Ixi\'im" (maíz en maya). Presentaron la propuesta al comisariado ejidal, quien les otorgó el permiso para trabajar el terreno. A través de talleres de agricultura orgánica y gestión de proyectos, aprendieron las técnicas necesarias.',
+                    impacto: 'Hoy, el Huerto Comunitario "Ixi\'im" es un espacio verde y productivo. No solo provee de alimentos sanos a más de 20 familias, sino que también se ha convertido en un punto de encuentro y aprendizaje para la comunidad. Ha demostrado el poder de la iniciativa juvenil para generar cambios positivos y sostenibles.',
+                    bannerImg: 'https://images.pexels.com/photos/796607/pexels-photo-796607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    galeria: [
+                        'https://images.pexels.com/photos/289353/pexels-photo-289353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                        'https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                        'https://images.pexels.com/photos/7734533/pexels-photo-7734533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    ]
+                },
+                '2': {
+                    tag: 'Arte y Cultura',
+                    titulo: 'Murales con Alma',
+                    comunidad: 'Izamal',
+                    participantes: '12 Artistas',
+                    anio: '2024',
+                    reto: 'El centro comunitario de Izamal lucía descuidado y gris. Los jóvenes artistas locales no tenían un espacio para expresar su talento, y la identidad cultural del pueblo no se veía reflejada en sus paredes.',
+                    solicitud: 'Mediante nuestro programa, un colectivo de artistas juveniles gestionó permisos y pintura con el ayuntamiento y comercios locales. Diseñaron y pintaron una serie de murales que narran las leyendas y tradiciones de Izamal.',
+                    impacto: 'El proyecto ha transformado visualmente el centro comunitario, convirtiéndolo en un punto de orgullo y una atracción turística. Ha fomentado el talento local y ha creado un fuerte sentido de pertenencia entre los habitantes.',
+                    bannerImg: 'https://images.pexels.com/photos/1577867/pexels-photo-1577867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    galeria: [
+                        'https://images.pexels.com/photos/1624600/pexels-photo-1624600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                        'https://images.pexels.com/photos/1570264/pexels-photo-1570264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                        'https://images.pexels.com/photos/761543/pexels-photo-761543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    ]
+                },
+                '3': {
+                    tag: 'Tecnología Social',
+                    titulo: 'Conectando Generaciones',
+                    comunidad: 'Valladolid',
+                    participantes: '6 Voluntarios',
+                    anio: '2024',
+                    reto: 'Muchos adultos mayores en Valladolid se sentían aislados, especialmente de familiares que viven lejos, por no saber usar smartphones o computadoras. La brecha digital era una barrera social significativa.',
+                    solicitud: 'Un equipo de jóvenes apasionados por la tecnología organizó talleres semanales gratuitos en la biblioteca pública. Crearon un manual sencillo y adaptado para enseñar a los adultos mayores a usar WhatsApp, hacer videollamadas y navegar por internet de forma segura.',
+                    impacto: 'Más de 50 adultos mayores han participado, logrando comunicarse con sus seres queridos. El proyecto ha mejorado la calidad de vida de los participantes y ha creado valiosos lazos de amistad intergeneracional.',
+                    bannerImg: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    galeria: [
+                        'https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                        'https://images.pexels.com/photos/7649249/pexels-photo-7649249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                        'https://images.pexels.com/photos/256517/pexels-photo-256517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    ]
+                }
+            };
+
+            // Obtener el ID del proyecto de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const proyectoId = urlParams.get('id');
+            const proyecto = proyectos[proyectoId];
+
+            // Si el proyecto existe, rellenar la página con su información
+            if (proyecto) {
+                document.title = proyecto.titulo + ' - KO\'OX LÍIK\'IL';
+                document.getElementById('bannerImg').src = proyecto.bannerImg;
+                document.getElementById('bannerImg').alt = 'Imagen del proyecto ' + proyecto.titulo;
+                document.getElementById('proyectoTag').textContent = proyecto.tag;
+                document.getElementById('proyectoTitulo').textContent = proyecto.titulo;
+                document.getElementById('proyectoComunidad').textContent = proyecto.comunidad;
+                document.getElementById('proyectoParticipantes').textContent = proyecto.participantes;
+                document.getElementById('proyectoAnio').textContent = proyecto.anio;
+                document.getElementById('proyectoReto').textContent = proyecto.reto;
+                document.getElementById('proyectoSolicitud').textContent = proyecto.solicitud;
+                document.getElementById('proyectoImpacto').textContent = proyecto.impacto;
+                
+                const galeriaGrid = document.getElementById('proyectoGaleriaGrid');
+                proyecto.galeria.forEach(imgUrl => {
+                    const img = document.createElement('img');
+                    img.src = imgUrl;
+                    img.alt = 'Imagen de la galería del proyecto ' + proyecto.titulo;
+                    galeriaGrid.appendChild(img);
+                });
+            } else {
+                // Si el proyecto no existe, mostrar un mensaje de error
+                document.querySelector('main').innerHTML = '<h1 style="text-align:center; padding: 50px;">Proyecto no encontrado</h1>';
+            }
+        });
+    </script>
+</body>
+</html>
